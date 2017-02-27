@@ -9,7 +9,6 @@ axios.get(`https://od-api.oxforddictionaries.com/api/v1/entries/${ARGS.source_la
   .then((response) => response.data)
   .then((data) => {
     const translations = data.results[0].lexicalEntries[0].entries[0].senses[0];
-
     const subsenses = translations.subsenses ? 
       translations.subsenses.map(senses => senses.definitions) :
       '';
