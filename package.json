@@ -1,0 +1,28 @@
+{
+  "name": "dictionarysocket",
+  "version": "1.0.0",
+  "description": "Oxfords' dictionary socket",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomsonpl/dictionarysocket.git"
+  },
+  "dependencies": {
+    "axios": "0.15.3"
+  },
+  "keywords": [
+    "socket",
+    "syncano",
+    "oxford",
+    "dictionary"
+  ],
+  "author": "Tomek Ciecierski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tomsonpl/dictionarysocket/issues"
+  },
+  "homepage": "https://github.com/tomsonpl/dictionarysocket#readme"
+}

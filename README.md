@@ -1,1 +1,2 @@
-# dictionarysocket
+# Oxford's dictionary socket
+

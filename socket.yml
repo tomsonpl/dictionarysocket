@@ -1,0 +1,37 @@
+name: Oxford
+description: Oxfrod's Dictionary and Translator 
+
+endpoints:
+  translate:
+    description: Translate from one language to another
+    file: scripts/getLanguages.js
+    parameters:
+      source_language:
+        type: string
+        description: "What should be the source language?"
+        example: "en"
+      word:
+        type: string
+        description: "What term would you like to translate?"
+        example: "beautiful"
+      target_language:
+        type: string
+        description: "What should be the target language?"
+        example: "es"
+    # response:
+    #   mimetype: text/plain
+    #   examples:
+    #     -
+    #       exit_code: 200
+    #       description: Success
+    #       example: In Oslo we have -2.3℃
+    #     -
+    #       exit_code: 400
+    #       description: Failed
+    #       example: 'Error: Not found city'
+  
+CONFIG:
+  app_id:
+    value: "9c302467"
+  app_key:
+    value: "36cbe55236155429a3f34480bc1fae39"
