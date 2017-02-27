@@ -1,10 +1,10 @@
-name: Oxford
+name: Dictionary
 description: Oxfrod's Dictionary and Translator 
 
 endpoints:
   translate:
     description: Translate from one language to another
-    file: scripts/getLanguages.js
+    file: scripts/getTranslations.js
     parameters:
       source_language:
         type: string
@@ -18,20 +18,72 @@ endpoints:
         type: string
         description: "What should be the target language?"
         example: "es"
-    # response:
-    #   mimetype: text/plain
-    #   examples:
-    #     -
-    #       exit_code: 200
-    #       description: Success
-    #       example: In Oslo we have -2.3℃
-    #     -
-    #       exit_code: 400
-    #       description: Failed
-    #       example: 'Error: Not found city'
-  
+  get_translations_answer:
+    description: Get nicely formatted translations output
+    file: scripts/getTranslationAnswer.js
+    parameters:
+      source_language:
+        type: string
+        description: "What should be the source language?"
+        example: "en"
+      word:
+        type: string
+        description: "What term would you like to translate?"
+        example: "beautiful"
+      target_language:
+        type: string
+        description: "What should be the target language?"
+        example: "es"
+  get_definitions:
+    description: Get description of a word
+    file: scripts/getDefinitions.js
+    parameters:
+      source_language:
+        type: string
+        description: "What should be the source language?"
+        example: "en"
+      word:
+        type: string
+        description: "What term would you like to translate?"
+        example: "beautiful"
+  get_definitions_answer:
+    description: Get a nicely formatted definition output
+    file: scripts/getDefinitionAnswer.js
+    parameters:
+      source_language:
+        type: string
+        description: "What should be the source language?"
+        example: "en"
+      word:
+        type: string
+        description: "What term would you like to translate?"
+        example: "beautiful"
+  get_examples:
+    description: Get example usage of the word
+    file: scripts/getExamples.js
+    parameters:
+      source_language:
+        type: string
+        description: "What should be the source language?"
+        example: "en"
+      word:
+        type: string
+        description: "Which term would you like to see examples of?"
+        example: "beautiful"
+  get_examples_answer:
+    description: Get nicely formatted examples
+    file: scripts/getExampleAnswer.js
+    parameters:
+      source_language:
+        type: string
+        description: "What should be the source language?"
+        example: "en"
+      word:
+        type: string
+        description: "Which term would you like to see examples of?"
+        example: "beautiful"
 CONFIG:
   app_id:
-    value: "9c302467"
+    value: "your_app_id"
   app_key:
-    value: "36cbe55236155429a3f34480bc1fae39"
+    value: "you_app_key"
