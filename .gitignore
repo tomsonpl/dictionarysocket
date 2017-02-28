@@ -1,4 +1,3 @@
 node_modules
 syncano/.dist
-syncano/.bundles
-syncano/**/scripts/.bundles
+scripts/.bundles

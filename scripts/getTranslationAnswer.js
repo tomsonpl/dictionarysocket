@@ -11,8 +11,8 @@ axios.get(`https://od-api.oxforddictionaries.com/api/v1/entries/${ARGS.source_la
 
     const onlyUnique = (value, index, self) => self.indexOf(value) === index;
     const translations = data.results[0].lexicalEntries[0].entries[0].senses[0].translations.map(term => term.text);
-    const unique = translations.filter(onlyUnique);
-    const translated = JSON.stringify(unique);
+    const uniqueTranslations = translations.filter(onlyUnique);
+    const translated = JSON.stringify(uniqueTranslations);
 
     setResponse(new HttpResponse(200, `Translations for ${ARGS.word}: ${translated}`, 'text/plain'));
   })

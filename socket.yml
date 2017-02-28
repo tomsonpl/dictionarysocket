@@ -82,8 +82,24 @@ endpoints:
         type: string
         description: "Which term would you like to see examples of?"
         example: "beautiful"
+  get_languages:
+    description: Get all possible languages
+    file: scripts/getLanguages.js
+    parameters:
+      listOfLanguages:
+        type: string
+        description: "This will print out a list of possible languages?"
+        example: "Click Enter ;)"
+  get_language_answer:
+    description: Get nicely formatted possible languages
+    file: scripts/getLanguageAnswer.js
+    parameters:
+      listOfLanguages:
+        type: string
+        description: "This will print out a list of possible languages?"
+        example: "Click enter ;)"
 CONFIG:
   app_id:
-    value: "your_app_id"
+    value: "<your_app_id>"
   app_key:
-    value: "you_app_key"
+    value: "<your_app_key>"
