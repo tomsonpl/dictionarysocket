@@ -98,8 +98,22 @@ endpoints:
         type: string
         description: "This will print out a list of possible languages?"
         example: "Click enter ;)"
+  get_synonyms:
+    description: Get description of a word
+    file: scripts/getSynonyms.js
+    parameters:
+      source_language:
+        type: string
+        description: "What should be the source language?"
+        example: "en"
+      word:
+        type: string
+        description: "What term would you like to translate?"
+        example: "beautiful"
 CONFIG:
   app_id:
+    description: "app_id provided after registering an app in oxfords dictionary"
     value: "<your_app_id>"
   app_key:
+    description: "app_key provided after registering an app in oxfords dictionary"
     value: "<your_app_key>"
