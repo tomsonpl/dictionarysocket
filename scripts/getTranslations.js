@@ -3,8 +3,8 @@ import axios from 'axios';
 
 axios.get(`https://od-api.oxforddictionaries.com/api/v1/entries/${ARGS.source_language}/${ARGS.word}/translations=${ARGS.target_language}`, {
   headers: {
-    app_id: CONFIG.app_id || '9c302467',
-    app_key: CONFIG.app_key || '36cbe55236155429a3f34480bc1fae39'
+    app_id: CONFIG.app_id,
+    app_key: CONFIG.app_key
   }
 })
   .then((response) => response.data)
@@ -14,5 +14,5 @@ axios.get(`https://od-api.oxforddictionaries.com/api/v1/entries/${ARGS.source_la
     setResponse(new HttpResponse(200, JSON.stringify(translations)));
   })
   .catch((error) => {
-    setResponse(new HttpResponse(400, error, 'text/plain'));
+    setResponse(new HttpResponse(400, error));
   });
