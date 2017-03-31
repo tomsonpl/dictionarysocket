@@ -1,5 +1,7 @@
 name: Dictionary
-description: Oxfrod's Dictionary and Translator 
+description: Oxfrod's Dictionary and Translator
+version: 1.0.0
+author: Tomsonpl
 
 endpoints:
   translate:
